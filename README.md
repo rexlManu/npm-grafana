@@ -7,9 +7,11 @@ required things you do beforehand
 1) create influxdb nginxproxymanagergraf
 2) Create username and password for nginxproxymanagergraf  
 3) get your GeoLite2-City.mmdb google is your friend upload it somewhere where you'll find it
-4) Start the docker container
-5) Add data source into grafana
-6) Import the dashboard file and set the new data source
+4) Copy http_top.conf into your nginx proxy manager /data/nginx/custom/ folder.  If the folder custom does not exist, please create it.
+5) For each of your proxy hosts on Nginx Proxy Manager, add a line to the advanced tab - "access_log /data/logs/NAME-json.log json_analytics;" replace NAME with the name you want to use.
+6) Start the docker container
+7) Add data source into grafana
+8) Import the dashboard file and set the new data source
 
 start docker on the same host where nginx proxy manger runs
 
