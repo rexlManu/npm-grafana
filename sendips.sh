@@ -15,7 +15,7 @@ else
 fi
 
 # Tail the custom log location to allow json parsing of the custom logs
-tail -f /logs/json/*.log | while read line;
+tail -f /logs/*-json.log | while read line;
 
 do
   #get requested domain from json log and remove the leading and trailing quotes
