@@ -25,7 +25,7 @@ Country = response.country.name
 Zip = response.postal.code
 IP = str(sys.argv[1])
 Domain = str(sys.argv[2])
-duration = int(sys.argv[3])
+time = int(sys.argv[3])
 print (Country)
 print (State)
 print (City)
@@ -57,8 +57,7 @@ hostname = socket.gethostname()
 measurement_name = ("ReverseProxyConnections")
 print (measurement_name)
 print ('*************************************')
-# take a timestamp for this measurement
-time = datetime.datetime.utcnow()
+
 
 # format the data as a single measurement for influx
 body = [
@@ -84,7 +83,6 @@ body = [
             "key": ISO,
             "IP": IP,
             "name": Country,
-            "duration": duration,
             "metric": 1
         }
     }
