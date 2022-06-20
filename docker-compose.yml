@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  npm-logger:
+    context: .
+    environment:
+      - INFLUX_USER=
+      - INFLUX_PW=
+      - INFLUX_DB=
+      - INFLUX_HOST=
+      - INFLUX_PORT=
